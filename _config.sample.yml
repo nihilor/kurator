@@ -26,13 +26,10 @@ googleanalytics:
 profiles:
     - name: Twitter
       icon: fa-twitter
-      link: http://twitter.com/kuratortheme
+      link: http://twitter.com/marklubkowitz
     - name: Facebook
       icon: fa-facebook 
-      link: http://facebook.com/kuratortheme
-    - name: Product Hunt
-      icon: fa-product-hunt
-      link: kurator
+      link: https://www.facebook.com/Mark-Lubkowitz-1624537281099925/
     - name: RSS
       icon: fa-rss 
       link: http://nihilor.github.io/kurator/feed.xml
