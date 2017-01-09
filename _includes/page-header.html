@@ -1,0 +1,18 @@
+<nav class="navbar navbar-fixed-top navbar-dark bg-primary bg-faded">
+    <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+    <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-toggleable-md" id="navbarResponsive">
+        {% if site.tagline != null %}
+        <span class="navbar-text">{{ site.tagline }}</span>
+        {% endif %}
+        <ul class="nav navbar-nav mr-auto float-lg-right">
+            {% for profile in site.profiles %}
+            {% if profile.link != null and profile.icon != null and profile.name != null %}
+            <li class="nav-item">
+                <a class="nav-link" href="{{ profile.link }}" title="{{ profile.name }}"><i class="fa fa-fw {{ profile.icon }}" aria-hidden="true"></i> <span class="social-label hidden-lg-up">{{ profile.name }}</span></a>
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</nav>

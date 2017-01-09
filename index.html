@@ -1,0 +1,91 @@
+---
+layout: default
+title: Websites and apps for Steam users
+---
+
+{% if site.cta.text != null %}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="weight-3">{{ site.cta.title }}</h1>
+        <p class="lead">{{ site.cta.text }}</p>
+        <p class="lead">
+            <a href="{{ site.cta.link }}" class="btn btn-outline-primary" role="button" title="{{ site.cta.linktext }}">{{ site.cta.linktext }}</a>
+        </p>
+    </div>
+</div>
+{% endif %}
+
+<div class="container">
+    <div class="content">
+    {% assign groups = site.curation | group_by: "category" | sort: "name" %}
+    {% for group in groups %}
+        <h2 class="weight-3">{{ group.name }}</h2>
+        <div class="row">
+        {% for item in group.items %}
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="card">
+                    {% if item.thumbnail and item.thumbnail != '' and item.thumbnail != null %}
+                    <a href="{{ item.url | prepend:site.url }}"><img class="card-img-top" src="{{ item.thumbnail | prepend:'assets/' }}" alt="{{ item.title }}"></a>
+                    {% endif %}
+                    <div class="card-block">
+                        <h4 class="card-title weight-3"><a href="{{ item.url | prepend:site.url }}">{{ item.title }}</a></h4>
+                        <p class="card-text">{{ item.content }}</p>
+                        <div class="card-social">
+                        {% if item.social.website != null %}
+                            <a href="{{ item.social.website }}" class="btn btn-outline-secondary btn-sm" title="Visit {{ item.title }}">
+                                <i class="fa fa-fw fa-home" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">Visit {{ item.title }}</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.steam != null %}
+                            <a href="{{ item.social.steam }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} in Steam">
+                                <i class="fa fa-fw fa-steam" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} in Steam</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.github != null %}
+                            <a href="{{ item.social.github }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} on Github">
+                                <i class="fa fa-fw fa-github" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} on Github</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.twitter != null %}
+                            <a href="{{ item.social.twitter }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} on Twitter">
+                                <i class="fa fa-fw fa-twitter" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} on Twitter</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.facebook != null %}
+                            <a href="{{ item.social.facebook }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} on Facebook">
+                                <i class="fa fa-fw fa-facebook-f" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} on Facebook</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.reddit != null %}
+                            <a href="{{ item.social.reddit }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} on Reddit">
+                                <i class="fa fa-fw fa-reddit-alien" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} on Reddit</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.youtube != null %}
+                            <a href="{{ item.social.youtube }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} on Youtube">
+                                <i class="fa fa-fw fa-youtube-play" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} on Youtube</span>
+                            </a>
+                        {% endif %}
+                        {% if item.social.twitch != null %}
+                            <a href="{{ item.social.twitch }}" class="btn btn-outline-secondary btn-sm" title="{{ item.title }} on Twitch">
+                                <i class="fa fa-fw fa-twitch" aria-hidden="true"></i>
+                                <span class="social-label hidden-xs-up">{{ item.title }} on Twitch</span>
+                            </a>
+                        {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+        </div>
+    {% endfor %}
+    </div>
+</div>
+<!-- /.container -->        

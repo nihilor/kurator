@@ -1,0 +1,13 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.url }}/css/style.css">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="description" content="{{ site.description }}">
+    <meta name="author" content="{{ site.author.name }}">
+    {% for opengraph in site.opengraph %}
+    <meta property="og:{{ opengraph[0] }}" content="{{ opengraph[1] }}" />{% endfor %}
+    <link rel="shortcut icon" href="{{ site.url }}/images/favicon.png">
+</head>

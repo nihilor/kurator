@@ -1,0 +1,19 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>{{ site.title }}</title>
+        <description>{{ site.description }}</description>
+        <link>{{ site.url }}</link>
+        {% for item in site.curation %}
+        <item>
+            <title>{{ item.title | xml_escape }}</title>
+            <description>{{ item.content | xml_escape }}</description>
+            <link>{{ item.url | prepend:site.url }}</link>
+            <guid isPermaLink="true">{{ item.url | prepend:site.url }}</guid>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>

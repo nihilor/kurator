@@ -1,0 +1,101 @@
+# SETUP
+# The title of your curation website
+title: Kurator
+# A brief description of your website, for use in HTML meta tags
+description: A free Jekyll theme for curation websites.
+# A brieg tagline of your website, used in the navigation bar
+tagline: A free Jekyll theme for curation websites.
+
+# PATH
+# The URL to your Github repository
+github: 'https://github.com/nihilor/kurator'
+# The path to your repository relative to Github
+baseurl: '/kurator'
+# The full URL to your curation website
+url: 'https://nihilor.github.io/kurator'
+# The content fpr the footer
+footer: 'Designed, built, and maintained by <a href="http://twitter.com/marklubkowitz">@marklubkowitz</a>. Based upon Kurator, a jekyll theme, by <a href="http://twitter.com/marklubkowitz">@marklubkowitz</a>.<br>Code licensed under <a href="https://github.com/nihilor/steamgamer/blob/master/LICENSE">MIT</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>'
+
+# GOOGLE ANALYTICS
+# Want to use Google Analytics? Fill in your UA code. Leave blank to deactivate.
+googleanalytics: 
+
+# PROFILES
+# Add you social media profiles here. You are not restricted to Facebook and Twitter. Just add as many profile you want. Select an appropriate icon from Font Awesome.
+# If the link attribute is missing, the profile won't show up.
+profiles:
+    - name: Twitter
+      icon: fa-twitter
+      link: http://twitter.com/kuratortheme
+    - name: Facebook
+      icon: fa-facebook 
+      link: http://facebook.com/kuratortheme
+    - name: Product Hunt
+      icon: fa-product-hunt
+      link: kurator
+    - name: RSS
+      icon: fa-rss 
+      link: http://nihilor.github.io/kurator/feed.xml
+    - name: Github
+      icon: fa-github 
+      link: https://github.com/nihilor/kurator
+        
+
+# OPENGRAPH
+opengraph:
+    # The language of your curation website.
+    locale: en_US
+    # Select one of the appropiate Opengraph types. It's website for the vast majority.
+    type: website
+    # The title of your website specifically formed for Opengraph.
+    title: Kurator - Curation theme for Jekyll
+    # The description of your website, specifically texted for Opengraph.
+    description: A free Jekyll theme for curation websites.
+    # The full url
+    url: 'http://nihilor.github.io/steamgamer'
+    # The sitename
+    site_name: Kurator
+    # An full url to an image for your website
+    image:
+
+# ABOUT
+author:
+    # Your name
+    name: Mark Lubkowitz
+    # URL of your private website
+    url: https://mlu.io
+    
+# CALL TO ACTION
+# Supply the following attributes to show a Call to Action in a jumbotron on the index page
+cta:
+    # The punchline
+    title: Fork us!
+    # The description of the Call to Action
+    text: Kurator is open-source. Fork us on Github and create your own curation website in minutes.
+    # The button link
+    link: https://github.com/nihilor/kurator
+    # The text of the button
+    linktext: Fork us on Github
+
+# DON'T CHANGE BENEATH THIS LINE, AS LONG AS YOU DON'T KNOW WHAT YOU'RE DOING.
+
+# Gems
+gems:
+    - jekyll-paginate
+
+# Collection
+collections:
+    curation:
+        output: true
+
+# Others
+markdown: kramdown
+kramdown:
+    auto_ids: true
+sass:
+    sass_dir: css
+    style: compressed
+exclude:
+- README.md
+safe: true
+lsi: false
