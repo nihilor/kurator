@@ -5,6 +5,12 @@ A Jekyll theme for curation websites.
 
 Kurator is an open-source Jekyll theme for curation websites. Just fork the theme, add some content, commit the theme to Github, and activate Github pages to run your own curation website.
 
+## How does it work?
+
+Kurator makes use of the collection feature of Jekyll. Every file in the `_curation` directory creates a new entry in the collection. Just copy the sample file and fill in the websites details.
+
+In addition, Kurator uses the sources of [Bootstrap 4 Alpha](https://v4-alpha.getbootstrap.com/). That means: You can use any of the Bootstrap components in the theme and you can easily change the look and feel of the theme just by editing the SASS files. Github pages automaticallly render the Jekyll theme and all the SASS files.
+
 ## How to start?
 
 Kurator is easy to use. Follow these instructions to set up and run your own curation website within minutes.
@@ -17,20 +23,25 @@ Kurator is easy to use. Follow these instructions to set up and run your own cur
 6. Activate Github pages. On the Github website, click on *Settings*, scroll down to *Github Pages* and select from *None* the Option *master branch*.
 7. Done.
 
-## Do you have a sample file for new curation entries?
+## Sample curation file
 
 You can use the following sample for new curation entries. Important: The files must end with `.md`. Otherweise Github pages won't render these files to HTML. And don't change the `layout` setting.
 
 ```yaml
 ---
+# Don't change this value.
 layout: page
+# The title of the curated site.
 title: Kurator
+# The category of curated site. Type any category you want.
 category: Theme
-tags: 
+# An image used as a thumbnail on the index page. Must be placed in "assets".
 thumbnail: kurator.jpg
+# A list of images used for a gallery shown on the details page. Images must be placed in "assets".
 gallery:
     - kurator.jpg
     - kurator-2.jpg
+# The links to the curated website and their social media profiles.
 social:
     website: http://kurator.mlu.io
     steam: https://steamcommunity.com/groups/steamdb
@@ -41,6 +52,7 @@ social:
     youtube: 
     twitch: 
 ---
+# A brief description of the curated website.
 Kurator is an open-source Jekyll theme for curation websites. Just fork the theme, add some content, commit the theme to Github, and activate Github pages to run your own curation website.
 ```
 

@@ -2,7 +2,6 @@
 layout: page
 title: Kurator
 category: Theme
-tags: 
 thumbnail: kurator.jpg
 gallery:
     - kurator.jpg
