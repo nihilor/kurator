@@ -5,6 +5,9 @@ A Jekyll theme for curation websites.
 
 Kurator is an open-source Jekyll theme for curation websites. Just fork the theme, add some content, commit the theme to Github, and activate Github pages to run your own curation website.
 
+![Recherchequellen is a sample project for the Kurator theme](https://github.com/nihilor/recherchequellen/169screenshot.png "Recherchequellen is a sample project for the Kurator theme")
+
+
 ## How does it work?
 
 Kurator makes use of the collection feature of Jekyll. Every file in the `_curation` directory creates a new entry in the collection. Just copy the sample file and fill in the websites details.
