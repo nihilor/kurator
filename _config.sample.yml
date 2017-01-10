@@ -14,7 +14,7 @@ baseurl: '/kurator'
 # The full URL to your curation website
 url: 'https://nihilor.github.io/kurator'
 # The content fpr the footer
-footer: 'Designed, built, and maintained by <a href="http://twitter.com/marklubkowitz">@marklubkowitz</a>. Based upon <a href="https://github.com/nihilor/kurator">Kurator, a jekyll theme</a>, by <a href="http://twitter.com/marklubkowitz">@marklubkowitz</a>.<br>Code licensed under <a href="https://github.com/nihilor/steamgamer/blob/master/LICENSE">MIT</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>'
+footer: 'Designed, built, and maintained by <a href="http://twitter.com/marklubkowitz">@marklubkowitz</a>. Based upon <a href="https://github.com/nihilor/kurator">Kurator, a jekyll theme</a>, by <a href="http://twitter.com/marklubkowitz">@marklubkowitz</a>.<br>Code licensed under <a href="https://github.com/nihilor/kurator/blob/master/LICENSE">MIT</a>. Content licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>'
 
 # GOOGLE ANALYTICS
 # Want to use Google Analytics? Fill in your UA code. Leave blank to deactivate.
@@ -49,7 +49,7 @@ opengraph:
     # The description of your website, specifically texted for Opengraph.
     description: A free Jekyll theme for curation websites.
     # The full url
-    url: 'http://nihilor.github.io/steamgamer'
+    url: 'http://nihilor.github.io/kurator'
     # The sitename
     site_name: Kurator
     # An full url to an image for your website
