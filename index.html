@@ -9,7 +9,7 @@ title: Index
         <h1 class="weight-3">{{ site.cta.title }}</h1>
         <p class="lead">{{ site.cta.text }}</p>
         <p class="lead">
-            <a href="{{ site.cta.link }}" class="btn btn-outline-primary" role="button" title="{{ site.cta.linktext }}">{{ site.cta.linktext }}</a>
+            <a href="{{ site.cta.link }}" class="btn btn-primary" role="button" title="{{ site.cta.linktext }}">{{ site.cta.linktext }}</a>
         </p>
     </div>
 </div>
@@ -73,7 +73,7 @@ title: Index
                                     {% assign link_title = false %}
                             {% endcase %}
                             {% if link[1] != null and link_icon != false %}
-                            <a href="{{ link[1] }}" class="btn btn-outline-secondary btn-sm" title="{{ link_title }}">
+                            <a href="{{ link[1] }}" class="btn-icon" title="{{ link_title }}">
                                 <i class="fa fa-fw {{ link_icon }}" aria-hidden="true"></i>
                                 <span class="social-label hidden-xs-up">{{ link_title }}</span>
                             </a>
