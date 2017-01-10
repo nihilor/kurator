@@ -8,7 +8,6 @@ gallery:
     - kurator-2.jpg
 social:
     website: http://kurator.mlu.io
-    steam: https://steamcommunity.com/groups/steamdb
     github: https://github.com/nihilor/kurator
     twitter: http://twitter.com/kuratortheme
     facebook: http://facebook.com/kuratortheme
