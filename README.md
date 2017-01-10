@@ -47,7 +47,6 @@ gallery:
 # The links to the curated website and their social media profiles.
 social:
     website: http://kurator.mlu.io
-    steam: https://steamcommunity.com/groups/steamdb
     github: https://github.com/nihilor/kurator
     twitter: http://twitter.com/kuratortheme
     facebook: http://facebook.com/kuratortheme
