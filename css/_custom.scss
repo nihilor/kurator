@@ -2,3 +2,10 @@
 //
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
+
+// options
+
+$enable-flex: true !default;
+$enable-rounded: false !default;
+$enable-shadows: true !default;
+$enable-transitions: true !default;

@@ -21,8 +21,8 @@ title: Index
     {% for group in groups %}
         <h2 class="weight-3">{{ group.name }}</h2>
         <div class="row">
-        {% for item in group.items %}
-            <div class="col-xs-12 col-sm-6 col-md-4">
+            {% for item in group.items %}
+            <div class="item col-xs-12 col-sm-6 col-md-4">
                 <div class="card">
                     {% if item.thumbnail != null %}
                     <a href="{{ item.url | prepend:site.url }}"><img class="card-img-top" src="{{ item.thumbnail | prepend:'assets/' }}" alt="{{ item.title }}"></a>
@@ -30,60 +30,61 @@ title: Index
                     <div class="card-block">
                         <h4 class="card-title weight-3"><a href="{{ item.url | prepend:site.url }}">{{ item.title }}</a></h4>
                         <div class="card-text">{{ item.content }}</div>
-                        <div class="card-social">
-                        {% for link in item.social %}
-                            {% assign link_icon = false %}
-                            {% assign link_title = false %}
-                            {% case link[0] %}
-                                {% when 'website' %}
-                                    {% assign link_icon = 'fa-home' %}
-                                    {% assign link_title = 'Visit website' %}
-                                {% when 'steam' %}
-                                    {% assign link_icon = 'fa-steam' %}
-                                    {% assign link_title = 'Open Steam Group' %}
-                                {% when 'github' %}
-                                    {% assign link_icon = 'fa-github' %}
-                                    {% assign link_title = 'Visit on Github' %}
-                                {% when 'twitter' %}
-                                    {% assign link_icon = 'fa-twitter' %}
-                                    {% assign link_title = 'Visit on Twitter' %}
-                                {% when 'facebook' %}
-                                    {% assign link_icon = 'fa-facebook-f' %}
-                                    {% assign link_title = 'Visit on Facebook' %}
-                                {% when 'reddit' %}
-                                    {% assign link_icon = 'fa-reddit-alien' %}
-                                    {% assign link_title = 'Visit on Reddit' %}
-                                {% when 'youtube' %}
-                                    {% assign link_icon = 'fa-youtube-play' %}
-                                    {% assign link_title = 'Visit on Youtube' %}
-                                {% when 'twitch' %}
-                                    {% assign link_icon = 'fa-twitch' %}
-                                    {% assign link_title = 'Visit on Twitch' %}
-                                {% when 'instagram' %}
-                                    {% assign link_icon = 'fa-instagram' %}
-                                    {% assign link_title = 'Visit on Instagram' %}
-                                {% when 'pinterest' %}
-                                    {% assign link_icon = 'fa-pinterest-p' %}
-                                    {% assign link_title = 'Visit on Pinterest' %}
-                                {% when 'rss' %}
-                                    {% assign link_icon = 'fa-rss' %}
-                                    {% assign link_title = 'Subscribe to feed' %}
-                                {% else %}
-                                    {% assign link_icon = false %}
-                                    {% assign link_title = false %}
-                            {% endcase %}
-                            {% if link[1] != null and link_icon != false %}
-                            <a href="{{ link[1] }}" class="btn-icon" title="{{ link_title }}">
-                                <i class="fa fa-fw {{ link_icon }}" aria-hidden="true"></i>
-                                <span class="social-label hidden-xs-up">{{ link_title }}</span>
-                            </a>
-                            {% endif %}
-                        {% endfor %}
-                        </div>
                     </div>
+                    <div class="card-footer">
+                    {% for link in item.social %}
+                        {% assign link_icon = false %}
+                        {% assign link_title = false %}
+                        {% case link[0] %}
+                            {% when 'website' %}
+                                {% assign link_icon = 'fa-home' %}
+                                {% assign link_title = 'Visit website' %}
+                            {% when 'steam' %}
+                                {% assign link_icon = 'fa-steam' %}
+                                {% assign link_title = 'Open Steam Group' %}
+                            {% when 'github' %}
+                                {% assign link_icon = 'fa-github' %}
+                                {% assign link_title = 'Visit on Github' %}
+                            {% when 'twitter' %}
+                                {% assign link_icon = 'fa-twitter' %}
+                                {% assign link_title = 'Visit on Twitter' %}
+                            {% when 'facebook' %}
+                                {% assign link_icon = 'fa-facebook-f' %}
+                                {% assign link_title = 'Visit on Facebook' %}
+                            {% when 'reddit' %}
+                                {% assign link_icon = 'fa-reddit-alien' %}
+                                {% assign link_title = 'Visit on Reddit' %}
+                            {% when 'youtube' %}
+                                {% assign link_icon = 'fa-youtube-play' %}
+                                {% assign link_title = 'Visit on Youtube' %}
+                            {% when 'twitch' %}
+                                {% assign link_icon = 'fa-twitch' %}
+                                {% assign link_title = 'Visit on Twitch' %}
+                            {% when 'instagram' %}
+                                {% assign link_icon = 'fa-instagram' %}
+                                {% assign link_title = 'Visit on Instagram' %}
+                            {% when 'pinterest' %}
+                                {% assign link_icon = 'fa-pinterest-p' %}
+                                {% assign link_title = 'Visit on Pinterest' %}
+                            {% when 'rss' %}
+                                {% assign link_icon = 'fa-rss' %}
+                                {% assign link_title = 'Subscribe to feed' %}
+                            {% else %}
+                                {% assign link_icon = false %}
+                                {% assign link_title = false %}
+                        {% endcase %}
+                        {% if link[1] != null and link_icon != false %}
+                        <a href="{{ link[1] }}" class="btn-icon" title="{{ link_title }}">
+                            <i class="fa fa-fw {{ link_icon }}" aria-hidden="true"></i>
+                            <span class="social-label hidden-xs-up">{{ link_title }}</span>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                    
                 </div>
             </div>
-        {% endfor %}
+            {% endfor %}
         </div>
     {% endfor %}
     </div>

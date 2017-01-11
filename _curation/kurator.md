@@ -2,10 +2,10 @@
 layout: page
 title: Kurator
 category: Theme
-thumbnail: kurator.jpg
+thumbnail: kurator.png
 gallery:
-    - kurator.jpg
-    - kurator-2.jpg
+    - kurator.png
+    - kurator.png
 social:
     website: http://kurator.mlu.io
     github: https://github.com/nihilor/kurator

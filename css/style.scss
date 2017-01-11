@@ -5,7 +5,6 @@
 
 @import 'bootstrap-flex';
 
-
 // add more css stuff here
 
 body {
@@ -29,22 +28,23 @@ a {
     }
 }
 .card {
-    border-radius: 0;
+    height: 100%;
+    border: none;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+.card-footer {
+    background: none;
     border: none;
 }
-.card-social {
-    .btn-sm {
-        font-size: 1rem;
-    }
+.card-block {
+    flex: 1 1 auto;
 }
 .card-img-top {
     max-width: 100%;
     width: 100%;
     display: block;
-    border-radius: 0;
-}
-.btn {
-    border-radius: 0;
 }
 .btn-icon {
     color: $gray-light;
@@ -88,4 +88,8 @@ dt {
     i {
         color: $gray-light;
     }
+}
+.item {
+    margin-bottom: .75rem;
+    margin: 15px 0;
 }
