@@ -3,7 +3,7 @@ layout: default
 title: Index
 ---
 
-{% if site.cta.text != null %}
+{% if site.cta.showasjumbotron == true and site.cta.link != null  %}
 <div class="jumbotron">
     <div class="container">
         <h1 class="weight-3">{{ site.cta.title }}</h1>

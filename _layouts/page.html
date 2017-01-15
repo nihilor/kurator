@@ -4,13 +4,14 @@ layout: default
 <div class="jumbotron">
     <div class="container">
         <h1 class="weight-3">{{ page.title }}</h1>
-        <div><span class="badge badge-pill badge-primary">{{ page.category }}</span></div>
+        <div><span class="text-muted">{{ page.category }}</span></div>
     </div>
 </div>
 
 <div class="container">
     <div class="content">
         {% if page.gallery != null %}
+        <h2 class="weight-3">{{ site.translation.gallery }}</h2>
         <div class="row">
             {% for image in page.gallery %}
             <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 gallery">
@@ -19,8 +20,9 @@ layout: default
             {% endfor %}
         </div>
         {% endif %}
-        <h2 class="weight-3">Description</h2> {{ content }}
-        <h2 class="weight-3">Profiles</h2>
+        <h2 class="weight-3">{{ site.translation.description }}</h2>
+        {{ content }}
+        <h2 class="weight-3">{{ site.translation.profiles }}</h2>
         <dl class="row">
             {% if page.social.website != null %}
             <dt class="col-sm-3 weight-3"><i class="fa fa-fw fa-home" aria-hidden="true"></i> Website</dt>

@@ -18,7 +18,13 @@ footer: 'Designed, built, and maintained by <a href="http://twitter.com/marklubk
 
 # GOOGLE ANALYTICS
 # Want to use Google Analytics? Fill in your UA code. Leave blank to deactivate.
-googleanalytics: 
+googleanalytics:
+
+# STRINGS
+translation:
+    description: Description
+    profiles: Profiles
+    gallery: Gallery
 
 # PROFILES
 # Add you social media profiles here. You are not restricted to Facebook and Twitter. Just add as many profile you want. Select an appropriate icon from Font Awesome.
@@ -73,6 +79,9 @@ cta:
     link: https://github.com/nihilor/kurator
     # The text of the button
     linktext: Fork us on Github
+    # Visibility of Call to Action
+    showinheader: true
+    showasjumbotron: false
 
 # DON'T CHANGE BENEATH THIS LINE, AS LONG AS YOU DON'T KNOW WHAT YOU'RE DOING.
 
