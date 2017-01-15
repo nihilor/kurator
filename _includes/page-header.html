@@ -26,11 +26,11 @@
             {% else %}
             <div class="col-sm-8 pt-4">
             {% endif %}
-                <h4 class="weight-3">About</h4>
+                <h4 class="weight-3">{{ site.translation.about }}</h4>
                 <p>{{ site.description }}</p>
             </div>
             <div class="col-sm-4 pt-4">
-                <h4 class="weight-3">Contact</h4>
+                <h4 class="weight-3">{{ site.translation.contact }}</h4>
                 <ul class="list-unstyled">
                     {% for profile in site.profiles %}
                     {% if profile.link != null and profile.icon != null and profile.name != null %}

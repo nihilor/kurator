@@ -25,6 +25,8 @@ translation:
     description: Description
     profiles: Profiles
     gallery: Gallery
+    contact: Contact
+    about: About
 
 # PROFILES
 # Add you social media profiles here. You are not restricted to Facebook and Twitter. Just add as many profile you want. Select an appropriate icon from Font Awesome.
